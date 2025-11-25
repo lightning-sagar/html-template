@@ -44,12 +44,16 @@ export function Index({ asyncapi, params = {} }) {
     </head>
   
     <body>
-      <div id="root">${renderedSpec}</div>
-  
-      ${asyncapiScript}
-  
-      ${appJs}
-    </body>
+
+    <!-- DEBUG singleFile -->
+    <div>DEBUG singleFile = param: ${String(params?.singleFile)} | computed: ${String(singleFile)}</div>
+
+    <div id="root">${renderedSpec}</div>
+
+    ${asyncapiScript}
+
+    ${appJs}
+   </body>
   </html>`
   );
 }
